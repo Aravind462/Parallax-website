@@ -1,0 +1,56 @@
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+body {
+    height: 200vh;
+}
+
+.image-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.background{
+    filter: blur(2px);
+    transform-origin: center center;
+    transition: transform 2s ease-out;
+}
+.background > img {
+    width: 100%;
+    height: 100vh;
+    object-fit: fill;
+}
+.details{
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.links>a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.links>i{
+    font-size: 1.4rem;
+}
+.foreground {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transform-origin: center center;
+    transition: transform 2s ease-out;
+}
+.foreground > img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(50%);
+}
